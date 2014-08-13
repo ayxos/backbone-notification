@@ -1,0 +1,14 @@
+.notification {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  right: 0;
+  top: 2%;
+  z-index: 9999;
+  &.alert-info, &.alert-success, &.alert-warning, &.alert-danger {
+    width: 30%;
+    margin: auto auto;
+    margin-top: 1%;
+  }
+}

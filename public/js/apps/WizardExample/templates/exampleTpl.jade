@@ -1,0 +1,119 @@
+.container
+  section#typeahead
+    .page-header
+      h1
+        | A simple Notification lib for Backbone
+        small(style="margin:1%;") notification-wizard.js
+    .row
+      h2 Live demo
+      .col-md-12(style="margin-bottom: 4%; border: solid 1px rgb(219, 219, 219); padding:3%;")
+        button(data-launch='notification', data-type='info', style="margin:1%").btn.btn-info info
+        button(data-launch='notification', data-type='danger', style="margin:1%").btn.btn-danger danger
+        button(data-launch='notification', data-type='warning', style="margin:1%").btn.btn-warning warning
+        button(data-launch='notification', data-type='success', style="margin:1%").btn.btn-success success
+      .col-md-3
+        h3 Author
+        p Marco Antonio Pajares
+        a(href="http://ayxos.com/backbone-wizard/") http://ayxos.com/
+        br
+        a(href="https://github.com/cybermarkus1/backbone-notification") github code
+
+        h3 About
+        p Create a custom backbone-notification.
+        ul
+          li must be used as a requireJS component with Backbone and bootstrap as deps.
+        p
+          a.btn.btn-primary(href='js/common/backbone-notification.js', target='_blank') Download
+
+        h3 Change log
+        dl
+          dt v@1.0.0
+          dt 13/08/2014
+          dd uglify js in a single file.
+
+      .col-md-9
+
+        pre.prettyprint.linenums.
+
+            //Notification
+            , Notification = require('common/backbone-notification')
+            
+            .
+            .
+            .
+
+            // SHOW NOTIIFICATION
+            new Notification({
+              // type could be: info/danger/success/warning
+              type: not_type,
+              msg: 'menu loaded'
+            });
+
+            .
+            .
+            .
+        hr
+        h2 Style code Css
+        pre.prettyprint.linenums.
+          .notification {
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            left: 0;
+            right: 0;
+            top: 2%;
+            z-index: 9999;
+            &.alert-info, &.alert-success, &.alert-warning, &.alert-danger {
+              width: 30%;
+              margin: auto auto;
+              margin-top: 1%;
+            }
+          }
+        hr
+        h2 Get backbone-notification.js
+        p Get the backbone-notification via bower:
+        pre.prettyprint.linenums.
+          bower install backbone-notification
+        h3 Options
+        table.table.table-bordered.table-striped
+          thead
+            tr
+              th(style='width: 100px;') Name
+              th(style='width: 50px;') type
+              th(style='width: 100px;') example
+              th description
+          tbody
+            tr
+              td type
+              td String
+              td 'info'/'danger'/'success'/'warning'
+              td notification type.
+            tr
+              td msg
+              td String
+              td 'Hi this is a notification'
+              td Display message.
+
+        h3 License
+        h4 MIT LICENSE
+        p The MIT License (MIT)
+        pre.prettyprint.linenums.
+         Copyright (c) 2014 marco
+
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+         copies of the Software, and to permit persons to whom the Software is
+         furnished to do so, subject to the following conditions:
+
+         The above copyright notice and this permission notice shall be included in all
+         copies or substantial portions of the Software.
+
+         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+         IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+         FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+         AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+         SOFTWARE.
