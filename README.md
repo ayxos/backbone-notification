@@ -1,7 +1,7 @@
 Backbone-notification
 ===================
 
-live version = http://ayxos.com/backbone-notification/
+live version  http://ayxos.com/backbone-notification/
 
 A tool for create simple bootstrap notification alerts using Backbone
 
@@ -13,7 +13,7 @@ using:
 - jquery
 - Backbone
 
-![ScreenShot](http://oi61.tinypic.com/122nepx.jpg)
+![ScreenShot](http://i62.tinypic.com/14vikp1.png)
 
 Install using bower
 ====================
