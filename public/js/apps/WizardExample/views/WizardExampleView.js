@@ -51,7 +51,7 @@ define(function(require) {
       new Notification({
         // type could be: info/danger/success/warning
         type: not_type,
-        msg: 'menu loaded'
+        message: 'menu loaded'
       });
 
     }
