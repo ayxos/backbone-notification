@@ -29,7 +29,7 @@ define(function(require) {
 
     initialize: function(arg) {
       this.model = {
-        message: arg.msg,
+        message: arg.message,
         alert_type: 'alert-' + arg.type
       };
       console.log('init notification base view', this.model, 'args', arg);
@@ -39,7 +39,12 @@ define(function(require) {
     render: function() {
       console.log('asociando al div alert');
       $(this.el).append( _.template(template,this.model) );
-      this.$el.find('.alert').alert();
+      if(window.alert){
+        this.$el.find(".alert").alert();
+      }
+      else{
+        console.log('You need to install boostrap.js before apply this plugin!');
+      }
       return this.$el;
     }
 
