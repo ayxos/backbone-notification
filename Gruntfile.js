@@ -17,6 +17,17 @@ module.exports = function(grunt) {
       }
     },
 
+    uglify: {
+      minlib: {
+        options:{
+          preserveComments: 'all'
+        },
+        files: {
+          './public/backbone-notification.min.js': ['public/js/common/backbone-notification.js']
+        }
+      }
+    },
+
     clean: {
       pre: {
         src: ['./public/js/main-built.*', './public/js/tpl/*']
@@ -249,7 +260,7 @@ module.exports = function(grunt) {
   grunt.registerTask('production', ['bower', 'clean:pre', 'sass', 'copy', 'jade', 'processhtml:prod', 'requirejs:app']);
 
   // default task
-  grunt.registerTask('default', ['jshint:all', 'clean:pre', 'copy', 'sass', 'jade', 'processhtml:dev']);
+  grunt.registerTask('default', ['uglify', 'bower', 'jshint:all', 'clean:pre', 'copy', 'sass', 'jade', 'processhtml:dev']);
   // test task
   grunt.registerTask('test', ['jshint', 'jasmine']);
 
