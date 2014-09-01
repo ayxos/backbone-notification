@@ -7,7 +7,7 @@ define(function(require) {
   * @class wizard
   */
 
-  require('bootstrap_3');
+  require('bootstrap');
 
   var Backbone = require('backbone')
 
@@ -15,7 +15,7 @@ define(function(require) {
   , template = require('tpl/apps/WizardExample/templates/exampleTpl')
   
   //Notification
-  , Notification = require('common/backbone-notification')
+  , Notification = require('not')
 
   ;
 
@@ -46,7 +46,7 @@ define(function(require) {
     },
 
     Notification: function(event){
-      var not_type = $(event.target).attr('data-type');
+      var not_type = $(event.currentTarget).attr('data-type');
       // SHOW NOTIIFICATION
       new Notification({
         // type could be: info/danger/success/warning

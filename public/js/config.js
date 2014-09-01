@@ -8,7 +8,8 @@ require.config({
     handlebars  : "../libs/vendors/handlebars/handlebars",
     underscore  : "../libs/vendors/underscore/underscore",
     jade        : '../libs/vendors/jade/runtime',
-    bootstrap_3 : '../libs/vendors/bootstrap-3/bootstrap'
+    bootstrap   : '../libs/vendors/bootstrap-3/bootstrap',
+    not         : '../backbone-notification.min'
 
   },
 
@@ -27,8 +28,11 @@ require.config({
       deps: ['backbone'],
       exports: 'Handlebars'
     },
-    bootstrap_3:{
+    bootstrap:{
       deps: ['jquery']
+    },
+    not:{
+      deps:['underscore', 'bootstrap', 'backbone']
     }
   }
 });

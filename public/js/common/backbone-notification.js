@@ -1,5 +1,5 @@
 /*!
- * Backbone-notification v1.0.0 (http://http://ayxos.com/backbone-notification/)
+ * Backbone-notification v1.1.0 (http://http://ayxos.com/backbone-notification/)
  * Copyright 2014 Marco Antonio Pajares Silva.
  * Licensed under MIT
  */
@@ -38,7 +38,8 @@ define(function(require) {
 
     render: function() {
       console.log('asociando al div alert');
-      $(this.el).append( _.template(template,this.model) );
+      var compile = _.template(template);
+      $(this.el).append( compile(this.model)  );
       if(window.alert){
         this.$el.find(".alert").alert();
       }
