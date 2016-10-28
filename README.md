@@ -1,7 +1,7 @@
 Backbone-notification
 ===================
 
-live version  http://ayxos.com/backbone-notification/
+live version  http://ayxos.github.io/backbone-notification/
 
 A tool for create simple bootstrap notification alerts using Backbone
 
